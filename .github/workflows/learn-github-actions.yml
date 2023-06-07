@@ -20,13 +20,6 @@ jobs:
         
       - name: Build
         run: ./gradlew build
-  
-  docker:
-    runs-on: ubuntu-latest
-    needs: build
-    
-    steps:
-      - uses: actions/checkout@v3
       
       - name: Docker Hub Login
         uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
