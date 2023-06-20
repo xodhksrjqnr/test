@@ -1,0 +1,13 @@
+name: send mail with slack
+
+on: [push]
+
+jobs:
+  send-mail:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: send
+        uses: slackapi/slack-github-action@v1.24.0
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
