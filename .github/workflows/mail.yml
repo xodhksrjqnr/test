@@ -8,6 +8,10 @@ jobs:
     
     steps:
       - name: send
-        uses: slackapi/slack-github-action@v1.24.0
+        uses: 8398a7/action-slack@v3
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        with:
+          status: ${{ job.status }}
+          author_name: Github Action Test
+          fields: repo,message,commit,author,action,eventName,ref,workflow,job,took
