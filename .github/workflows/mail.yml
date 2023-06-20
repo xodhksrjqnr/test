@@ -13,5 +13,5 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         with:
           status: ${{ job.status }}
-          author_name: Github Action Test2
+          author_name: Github Action Test3
           fields: repo,message,commit,author,action,eventName,ref,workflow,job,took
